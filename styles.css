@@ -325,7 +325,7 @@ header{
     background-color: var(--main-font-color-dark);
 }
 
-/*Taste of Greek Cuisine*/
+/*Taste Greek Cuisine*/
 .GreekCuisine{
     background: url("https://static1.squarespace.com/static/56c39efae32140381a07f2bd/56c7617bcf80a1ca9c54b8c5/5c0f5ed7032be447e4386852/1544515863685/Catering-table-spread.jpg?format=1500w") center no-repeat;
     background-size: cover;
@@ -336,6 +336,34 @@ header{
     display: flex;
     align-items: center;
 }
+
+/*Discover our menu*/
+    .image-group{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+}
+
+.discover-our-menu .restaurant-description{
+    padding-top: 3rem;
+    margin-bottom: 0;
+}
+
+.discover-our-menu.restaurant-description{
+    padding-top: 3rem;
+    margin-bottom: 0;
+}
+
+/*Caldera View*/
+.caldera-view{
+    background: url("https://cf.bstatic.com/images/hotel/max1024x768/487/48710024.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.caldera-view .headline{
+    color: white;
+}
+
 
 
 
