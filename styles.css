@@ -5,9 +5,10 @@
 *::after{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+}
 
-    /*Variables for fonts*/
+/*Variables for fonts*/
 :root{
     --main-font: 'Source Sans Pro', sans-serif;
     --secondary-font:'Herr Von Muellerhoff', cursive;
@@ -24,8 +25,20 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 section{
     padding: 3.9rem 0;
+}
+
+.logo image{
+    width: 14vw;
+    height: 15vh;
+}
+    
+
 }
 
 img{
@@ -129,6 +142,11 @@ header{
 
 .nav-item{
     border-bottom: 2px solid rgba(225,255,255, .3);
+    margin: 0 30px;
+}
+
+.nav-item: :last-child{
+    margin-right: 0;
 }
 
 .nav-link{
@@ -164,6 +182,9 @@ header{
     font-weight: 200;
     line-height: .5;
     letter-spacing: 2px;
+    opacity: 0;
+    animation: fadeUp .5s forwards;
+    animation-delay: .4s;
 }
 
 .first-letter{
@@ -180,6 +201,7 @@ header{
     font-weight: 900;
     letter-spacing: .5rem;
     margin-right: -.5rem;
+    animation: scale .5s forwards;
 }
 
 .separator{
@@ -192,8 +214,11 @@ header{
     width: 100%;
     max-width: 8.4 rem;
     height: .25rem;
-    background-color: white;
+    background-color: rgb(231, 59, 59);
     position: relative;
+    opacity: 0;
+    animation: grow 2s forwards;
+    animation-delay: .9s;
 }
 
 .single-animation{
@@ -207,22 +232,34 @@ header{
     top: 50%;
     transform: translateY(-50%);
     border: .6rem solid transparent;
+    opacity: 0;
+    animation: grow .5s forwards;
+    animation-delay: 1.2s;
 }
 
 .line-right::before{
-    border-right-color: white;
+    border-right-color: rgb(231, 59, 59);
     right: 0;
 }
 
 .line-left::before{
-    border-left-color: #fff;
+    border-left-color: rgb(231, 59, 59);
     left: 0;
 }
 
 .asterisk{
     font-size: 1.2rem;
-    color: var(--secondary-font-color);
+    color: black;
     margin: 0 1.6rem;
+    opacity: 0;
+    animation: spin .5s forwards;
+    animation-delay: .7s;
+}
+
+.single-animation{
+    opacity: 0;
+    animation: fadeUp .5s forwards;
+    animation-delay: 1.5s;
 }
 
 .headline-description h5{
@@ -285,7 +322,7 @@ header{
 }
 
 .restaurant-info{
-    text-align: center;
+    text-align: justify;
 }
 
 .restaurant-description{
@@ -295,7 +332,9 @@ header{
 .restaurant-description p{
     line-height: 1.6;
     margin-bottom: 2.4rem;
+    letter-spacing: 3px;
 }
+
 
 .body-btn{
     font-size: 1.5rem;
@@ -327,8 +366,10 @@ header{
 
 /*Taste Greek Cuisine*/
 .GreekCuisine{
-    background: url("https://static1.squarespace.com/static/56c39efae32140381a07f2bd/56c7617bcf80a1ca9c54b8c5/5c0f5ed7032be447e4386852/1544515863685/Catering-table-spread.jpg?format=1500w") center no-repeat;
+    background: url("https://blueolivegreektaverna.com/wp-content/uploads/2020/05/blue-olive-greek-table-banner.jpg") center no-repeat;
     background-size: cover;
+    background-position: center center;
+    margin-bottom: 4rem;
 }
 
 .between{
@@ -337,8 +378,18 @@ header{
     align-items: center;
 }
 
+.GreekCuisine .sub-headline{
+    position: relative;
+    top: -11rem;
+}
+
+.GreekCuisine .headline{
+    position: relative;
+    top: -10rem;
+    left: 14rem;
+}
 /*Discover our menu*/
-    .image-group{
+.image-group{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5rem;
@@ -347,21 +398,36 @@ header{
 .discover-our-menu .restaurant-description{
     padding-top: 3rem;
     margin-bottom: 0;
-}
-
-.discover-our-menu.restaurant-description{
-    padding-top: 3rem;
-    margin-bottom: 0;
-}
+} 
 
 /*Caldera View*/
 .caldera-view{
     background: url("https://cf.bstatic.com/images/hotel/max1024x768/487/48710024.jpg") center no-repeat;
     background-size: cover;
+    margin-top: 4rem;
 }
 
 .caldera-view .headline{
-    color: white;
+    color: black;
+    position: relative;
+    top: 6.5rem;
+    left: 22rem;
+
+}
+
+.caldera-view .sub-headline{
+    position: relative;
+    bottom: -4.5rem;
+    left: 22rem;
+}
+
+.Gastronomy-Adventure .animate-top{
+    width: 100%;
+    height: 100%;
+}
+
+.Gastronomy-Adventure .asterisk{
+    color: red;
 }
 
 /*Footer*/
@@ -376,7 +442,7 @@ footer{
 .back-to-top{
     width: 7rem;
     height: 7rem;
-    background-color: aqua;
+    background-color: rgb(8, 134, 238);
     position: absolute;
     top: -3rem;
     left: 50%;
@@ -389,10 +455,7 @@ footer{
     color:#fff;
     font-size: 2.2rem;
     padding: 2rem;
-}
-
-.footer-content{
-    
+    animation: up 2s infinite;
 }
 
 .footer-content h4{
@@ -432,7 +495,7 @@ footer{
 
 .social-icons i:hover,
 .social-icons i:focus{
-    color: var(--secondary-font-color);
+    color: lightcoral;
 }
 
 .newsletter-form{
@@ -452,8 +515,333 @@ footer{
 .newsletter-btn{
     background-color: transparent;
     border: none;
-    color: var
+    color: dodgerblue;
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 1px .6rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10.5rem;
 }
+
+/*Media Queries*/
+@media screen and (min-width: 900px){
+    section{
+        padding: 7.9rem;
+    }
+
+    .menu-toggle{
+        display: none;
+    }
+
+    .nav{
+        justify-content: space-between;
+    }
+
+    .nav-list{
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        padding: 0;
+        justify-content: initial;
+        flex-direction: row;
+        transform: initial;
+        transition: initial;
+    }
+
+    .nav-item{
+        margin-left: 0 2.4rem;
+        border: none;
+    }
+
+    .nav-item:last-child{
+        margin-right: 0;
+    }
+
+    .nav-link{
+        font-size: 1.3rem;
+    }
+    
+    .active{
+        position: relative;
+    }
+    
+    .active::before{
+        content:"";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        left: 0;
+        bottom: -3px;
+    }
+    
+    .sub-headline{
+        font-size: 10rem;
+    }
+
+    .first-letter{
+        font-size: 12.2rem;
+    }
+
+    .headline{
+        font-size: 4.8rem;
+        letter-spacing: .8rem;
+    }
+
+    .line{
+        max-width: 11.4rem;
+    }
+
+    .restaurant-info{
+        display: flex;
+        align-items: center;
+    }
+
+    .restaurant-info > div{
+        flex: 1;
+    }
+    .padding-right{
+        padding-right: 7rem;
+    }
+
+    .footer-content{
+        max-width: 77.5rem;
+        margin: auto;
+    }
+
+    .footer-content-about{
+        max-width: 51.3rem;
+        margin: 0 auto 5.4rem;
+    }
+
+    .footer-content-divider{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .social-media,
+    .newsletter-form{
+        width: 100%;
+        max-width: 27.3rem;
+        margin: 0 1rem;
+    }
+
+    .social-icons i{
+        opacity: 1;
+    }
+
+    .newsletter-btn{
+        margin-left: 7.5rem;
+    }
+}
+
+/*Animations*/
+@keyframes fadeUp{
+    0%{
+        transform: translateY(4rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+
+}
+
+@keyframes grow{
+    0%{
+        width: 0;
+    }
+    100%{
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes fadeDown{
+    0%{
+        transform: translateY(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes up{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+}
+
+/*Menu Page Starts*/
+.menu{
+    width: 100%;
+    height: 100vh;
+    background: url("https://i.pinimg.com/originals/04/b4/a6/04b4a6c858b9ccc96bcccfc57c3ed038.jpg") center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-headline2{
+    text-align-last: left;
+    font-size: 8.4rem;
+    font-family: var(--secondary-font);
+    color:red;
+    font-weight: 200;
+    line-height: .5;
+    letter-spacing: 2px;
+    margin-left: 27rem;
+    opacity: 0;
+    animation: fadeUp .5s forwards;
+    animation-delay: .4s;
+}
+
+.first-letter2{
+    text-transform: uppercase;
+    font-size: 10.4rem;
+}
+
+.headline2{
+    color: black;
+    text-align: left;
+    font-family: var(--main-font);
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .5rem;
+    margin-left: 33rem;
+    animation: scale .5s forwards;
+}
+
+.separator2{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-left: 25rem;
+}
+
+.line2{
+    width: 100%;
+    max-width: 8.4 rem;
+    height: .25rem;
+    background-color: rgb(231, 59, 59);
+    position: relative;
+    opacity: 0;
+    animation: grow 2s forwards;
+    animation-delay: .9s;
+}
+
+.line-right::before,
+.line-left::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: .6rem solid transparent;
+    opacity: 0;
+    animation: grow .5s forwards;
+    animation-delay: 1.2s;
+}
+
+.line-right::before{
+    border-right-color: rgb(231, 59, 59);
+    right: 0;
+}
+
+.line-left::before{
+    border-left-color: rgb(231, 59, 59);
+    left: 0;
+}
+
+.asterisk{
+    font-size: 1.2rem;
+    color: black;
+    margin: 0 1.6rem;
+    opacity: 0;
+    animation: spin .5s forwards;
+    animation-delay: .7s;
+}
+
+.single-animation{
+    opacity: 0;
+    animation: fadeUp .5s forwards;
+    animation-delay: 1.5s;
+}
+
+.headline-description h5{
+    color: midnightblue;
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+}
+
+.Menu-btn{
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: -2px;
+    margin-left: 28rem;
+
+}
+
+.menu-btn{
+    font-size: 1.1rem;
+    background-color: transparent;
+    padding: .9rem 1.8rem;
+    color: var(--body-font-color);
+    border-radius: .5rem;
+    transition: background-color .5s;
+}
+
+.Menu-btn:hover,
+.menu-btn:focus{
+    color: #fff;
+    background-color: rgb(245, 112, 79);
+}
+
+
+
+
+
+
+
+
 
 
 
