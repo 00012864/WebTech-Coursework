@@ -39,9 +39,6 @@ section{
     height: 15vh;
 }
     
-
-}
-
 img{
     width: 100%;
     max-width: 100%;
@@ -1688,26 +1685,137 @@ footer{
     background-color: rgb(245, 112, 79);
 }
 
-.box{
-    width: 300px;
-    box-shadow: 2px 2px 30px rgba(0,0,0,0.2)
-    border-radius: 10px;
-    overflow: hidden;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.Container{
+    width: 1100px;
+    height: 500px;
+    background: #ccc;
+    margin: 30px auto;
+    display: flex;
+    border-radius: 100%;
 }
-
-.slide-img{
-    height: 450px;
-}
-
-.slide-img img{
-    width: 100%;
+.col{
     height: 100%;
-    object-fit: cover;
+    flex: 1;
+    color: var(--main-font-color-dark);
     box-sizing: border-box;
+    padding: 25px;
+    position: relative;
+    transition: 0.5s;
+}
+.col:nth-child(1){
+    background: rgb(220, 220, 220);
+
+}
+.col:nth-child(2){
+    background: rgb(252, 200, 200);
+    
+}
+.col:nth-child(3){
+    background: rgb(220, 220, 220);
+}
+.col:nth-child(4){
+    background: rgb(252, 200, 200);
+}
+
+h2{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: var(--main-font);
+}
+.caption{
+    max-width: 235px;
+    font-size: 13px;
+    margin: 28px 0;
+    display: none;
+    font-family: var(--main-font);
+}
+.caption button{
+    border: 1px solid var(--main-font-color-dark);
+    background: transparent;
+    outline: none;
+    padding: 8px 18px;
+    color: #fff;
+    border-radius: 30px;
+    margin-top: 22px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.col img{
+    width: 220px;
+    height: 150px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.col:hover{
+    flex-grow: 2.6;
+}
+.col:hover .caption{
+    display: block;
+}
+.color:hover h2{
+    text-align: left;
+}
+
+/*Menu-Items*/
+.menu2-section{
+    padding-bottom: 0;
+}
+.menu-wrapper{
+    margin-top: 2rem;
+}
+.Menu-Item{
+    position: relative;
+    cursor: pointer;
+}
+.menu-overlay{
+    height: 133px;
+    background: rgb(65, 62, 62);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 1.5rem;
+    opacity: 0.85;
+    overflow: hidden;
+}
+.menu-overlay-content{
+    overflow: hidden;
+}
+.menu-overlay-content div{
+    display: flex;
+    justify-content: space-between;
+}
+.menu-overlay-content h2{
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+.menu-overlay-content h5{
+    text-transform: uppercase;
+    color:aqua;
+    margin-top: 0.7rem;
+    font-size: 1.4rem;
+}
+.Menu-Item:hover .menu-overlay{
+    opacity: 1;
+    color: yellow;
+}
+.Menu-Item:hover .menu-overlay-content{
+    transform: translateY(0);
+}
+
+@media screen and (min-width: 678px){
+    .menu-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .menu-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
@@ -1715,13 +1823,3 @@ footer{
 
 
 
-
-
-
-
-
-
-
-
-
->>>>>>> Stashed changes
