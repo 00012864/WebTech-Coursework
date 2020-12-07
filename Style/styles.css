@@ -2039,11 +2039,11 @@ h2{
 
 .poster{
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/banner-img.jpg") center/cover no-repeat;
+    background: linear-gradient(rgba(245, 248, 248, 0.918), rgba(185, 202, 235, 0.5)), url("../image/banner-img.jpg") center/cover no-repeat;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: rgb(21, 21, 24);
     align-items: center;
     padding-bottom: 22px;
 }
@@ -2051,8 +2051,9 @@ h2{
     display: grid;
     grid-template-columns: 420px 420px;
 }
-.card-img{
-    background: url("../image/card-img.jpg") center/cover no-repeat;
+.poster .card-img{
+    margin-right: 25px;
+    margin-top: 25px;
 }
 .poster h2{
     padding-bottom: 42px;
@@ -2060,11 +2061,11 @@ h2{
 }
 .card-content{
     background: #fff;
-    height: 333px;
+    height: 300px;
 }
 .card-content h3{
     text-align: center;
-    color: #000;
+    color: rgb(82, 80, 80);
     padding: 26px 0 10px 0;
     font-size: 25px;
     font-weight: 505;
@@ -2074,3 +2075,40 @@ h2{
     width: 90%;
     margin: 0 auto;
 }
+form select, form input{
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 310;
+    margin: 14px 13px;
+    padding: 5.1px;
+    border-bottom: 1px solid #eee;
+    outline: none;
+    border: none;
+}
+form input[type = text], form input[type = number], form input::placeholder, select{
+    color: rgb(248, 74, 176)
+}
+form input[type = submit]{
+    color: white;
+    background: rgb(80, 120, 252);
+    padding: 13px 0;
+    border-radius: 3.8px;
+    cursor: pointer;
+}
+form input[type = submit]:hover{
+    opacity: 0.8;
+}
+@media(max-width: 992px){
+    .card-container{
+        grid-template-columns: 100%;
+        width: 100vw;
+    }
+    .card-img{
+        height: 332px;
+    }
+}
+
+
+
