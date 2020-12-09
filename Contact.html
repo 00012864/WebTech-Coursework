@@ -1,0 +1,50 @@
+<!--doctype html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Form</title>
+<!--link-stylesheet----------->
+<link rel="stylesheet" type="text/css" href="Style\styles.css">
+<script src="C:\Users\javoh\Desktop\WebTech-Coursework\WebTech-Coursework\js\main.js"></script>
+</head>
+<body>
+	<head>
+        <nav>
+            <div class="logo">
+      Rosabelle</div>
+      <ul>
+      <li><a href="index-updated.html">Home</a></li>
+      <li><a href="Menu.html">Menu</a></li>
+      <li><a href="Reservation.html">Reservations</a></li>
+      <li><a href="News.html">News</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a class="active" href="Contact.html">Contact</a></li>
+      </ul>
+      </nav>
+
+<div class="containerContact">
+	<form action="">
+		<div class="row">
+			<div class="column">
+				<input type="text" placeholder="Name*" name="Name" required oninvalid="this.setCustomValidity('Please Enter Your Name')" oninput="this.setCustomValidity('')">
+			</div>
+			<div class="column half">
+				<input type="text" placeholder="Email*" name="Email" required oninvalid="this.setCustomValidity('Please Enter Your Email')" oninput="this.setCustomValidity('')">
+			</div>
+			<div class="column half">
+				<input type="text" placeholder="Phone*" name="Phone" required oninvalid="this.setCustomValidity('Please Enter Your Phone')" oninput="this.setCustomValidity('')" pattern="[1-9]{1}[0-9]{9}">
+			</div>
+			<div class="column">
+				<textarea placeholder="Message" name="Message*" required oninvalid="this.setCustomValidity('Please Enter a message')" oninput="this.setCustomValidity('')"></textarea>
+			</div>
+			<div class="column">
+				<input type="submit" value="Submit"> 
+			</div>
+		</div>
+	</form>
+</div>
+</body>
+</html>
